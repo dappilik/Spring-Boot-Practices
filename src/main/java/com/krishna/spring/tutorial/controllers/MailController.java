@@ -13,7 +13,7 @@ public class MailController {
 	private MailSender mailSender ;//=new MockMailSender() ;
 	
 	@Autowired
-	public MailController(@Qualifier("mockMailSender") MailSender mailSender) {
+	public MailController(MailSender mailSender){
 	this.mailSender = mailSender;
 	}
 	
