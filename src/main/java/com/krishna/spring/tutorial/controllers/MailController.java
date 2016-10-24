@@ -1,5 +1,7 @@
 package com.krishna.spring.tutorial.controllers;
 
+import javax.mail.MessagingException;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,9 +21,9 @@ public class MailController {
 	
 	
 	@RequestMapping("/mail")
-	public String sendMail()
+	public String sendMail() throws MessagingException
 	{
-		mailSender.send("abc@example.com", "some subject", " some body");
+		mailSender.send("dappili.k@live.com", "Java smtp mail2", "You are awsome!!! are you?");
 		return "Mail sent";
 	}
 	
